@@ -1,5 +1,8 @@
 import the4
 import os
+import time
+import sys
+start=time.time()
 def main():
     with open("trees.txt") as file:
         data = file.read().split("\n")
@@ -13,4 +16,6 @@ def main():
             a.write(str(answer)+"\n")
     a.close
 main()
-os.system("./test_the4")
+end=time.time()
+os.system("./test_the4 "+str(end-start))
+print "Your Code returned the answers in : "+str(end-start)
